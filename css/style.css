@@ -1,0 +1,142 @@
+@font-face {
+  font-family: suisseIntlmed;
+  src: url(../assets/fonts/SuisseIntlCondTrial-Medium.otf);
+}
+@font-face {
+  font-family: suisseIntlight;
+  src: url(../assets/fonts/SuisseIntlCondTrial-Light.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(
+      rgba(26, 27, 28, 0.9),
+      rgba(26, 27, 28, 0.9)
+    ),
+    url(../assets/img/bgImg.jpg);
+  overflow: hidden;
+  font-family: suisseIntlmed, Helvetica, Arial, sans-serif;
+}
+header div nav {
+  width: 80%;
+}
+section {
+  height: 100vh;
+  align-items: center;
+}
+section .contentBox {
+  height: 80vh;
+  margin-left: 10px;
+}
+section .contentBox p {
+  letter-spacing: 1px;
+  font-size: 18.5px;
+  color: #fff;
+}
+section .contentBox p .p_second {
+  font-family: suisseIntlight;
+  color: #7c7c7d;
+  letter-spacing: 2px;
+  line-height: 1.63em;
+  font-size: 25px;
+}
+section .contentBox .countdown {
+  display: flex;
+  margin: 25px 0px;
+}
+section .countdown .days {
+  margin-left: -45px;
+}
+section .contentBox .countdown .time {
+  font-family: suisseIntlmed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 48px;
+  min-width: 130px;
+  padding: 10px 0px;
+  border-radius: 4px;
+  color: #fff;
+}
+section .contentBox .countdown .time span {
+  font-family: suisseIntlight;
+  letter-spacing: 1px;
+  font-weight: 200px;
+  font-size: 13px;
+  color: #fff;
+}
+.bx {
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #7c7c7d;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 25px;
+}
+.bx:hover {
+  background-color: #ca0000;
+  border-color: #ca0000;
+}
+@media (max-width: 1200px) {
+  header .image {
+    width: 8%;
+  }
+}
+@media (max-width: 992px) {
+  header .image {
+    width: 10%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  section {
+    height: 80vh;
+    margin-left: 0px;
+  }
+  header .image {
+    width: 10%;
+  }
+  section .contentBox p {
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 2em;
+  }
+  section .contentBox p .p_second {
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 1em;
+  }
+  section .contentBox .countdown .time {
+    min-width: 80px;
+  }
+  section .countdown .days {
+    margin-left: -30px;
+  }
+  section .contentBox .mbl-view {
+    margin-left: -20px;
+  }
+}
+@media (max-width: 576px) {
+  header .image {
+    width: 30%;
+  }
+  section .contentBox p {
+    letter-spacing: 1px;
+    font-size: 13.5px;
+    line-height: 2em;
+  }
+  section .contentBox p .p_second {
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 1em;
+  }
+  section .countdown .days {
+    margin-left: -20px;
+  }
+}
