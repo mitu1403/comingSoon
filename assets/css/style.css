@@ -1,0 +1,272 @@
+@font-face {
+  font-family: suisseLight;
+  src: url(../fonts/SuisseIntlCondTrial-Light.otf);
+}
+@font-face {
+  font-family: suisseMedium;
+  src: url(../fonts/SuisseIntlCondTrial-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: suisseMedium, Helvetica, Arial, sans-serif;
+}
+
+.mainClass {
+  background: linear-gradient(rgba(26, 27, 28, 0.9), rgba(26, 27, 28, 0.9)),
+    url(../images/bgImg.jpg) center center;
+}
+.mainClass#blur.active {
+  pointer-events: none;
+  user-select: none;
+}
+
+.subClass {
+  height: 100vh;
+}
+
+.menu {
+  width: 5%;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.bar {
+  width: 100%;
+  background-color: red;
+  height: 2px;
+  margin: 10px 0px;
+  transition: all 0.7s ease;
+  border-radius: 10px;
+}
+.bar.half {
+  width: 50%;
+  transform: translateX(0.8rem);
+}
+.menu:hover .full {
+  width: 50%;
+  transform: translateX(0.8rem);
+}
+.menu:hover .half {
+  width: 100%;
+  transform: translateX(-0px);
+}
+.contentBox p {
+  letter-spacing: 1px;
+  font-size: 18.5px;
+  color: #fff;
+}
+.contentBox p .p_second {
+  font-family: suisseLight;
+  color: #7c7c7d;
+  letter-spacing: 2px;
+  line-height: 1.63em;
+  font-size: 25px;
+}
+
+.contentBox .countdown {
+  display: flex;
+  margin: 25px 0;
+}
+.contentBox .countdown .time {
+  font-family: suisseMedium;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  min-width: 130px;
+  padding: 10px 0;
+  border-radius: 4px;
+  color: #fff;
+}
+.countdown .days {
+  margin-left: -5.5%;
+}
+.contentBox .countdown .time span {
+  font-family: suisseLight;
+  letter-spacing: 1px;
+  font-weight: 200px;
+  font-size: 13px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+.bx {
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #7c7c7d;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 25px;
+  transition: all 0.4s ease-in-out;
+}
+.bx:hover {
+  background-color: #ca0000;
+  transition: all 0.4s ease-in-out;
+}
+
+.footer {
+  color: #7c7c7d;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-family: suisseLight;
+}
+
+#popup {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 81.7%;
+  padding: 5%;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(26, 27, 28, 1);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+#popup.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+#popup h5 {
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 17px;
+  text-align: center;
+  font-family: suisseMedium;
+}
+#popup p {
+  text-align: center;
+  font-family: suisseLight;
+  color: #7c7c7d;
+  letter-spacing: 2px;
+  line-height: 1.63em;
+  font-size: 19px;
+}
+#popup .contact-form input,
+#popup .contact-form textarea {
+  border: none;
+  letter-spacing: 1px;
+  font-family: suisseLight;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  border-radius: 0px;
+}
+#popup .contact-form input:focus,
+#popup .contact-form textarea:focus {
+  border: 1px solid white;
+  background-color: #fff;
+  color: #7c7c7d;
+}
+#popup .contact-form textarea,
+#popup .contact-form input {
+  color: white;
+}
+#popup .contact-form ::placeholder {
+  font-size: 0.8em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-family: suisseLight;
+}
+#popup .contact-form button {
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 0.1em;
+  font-family: suisseLight;
+  transition: all 0.4s ease-in-out;
+}
+#popup .contact-form button:hover {
+  background-color: #ca0000;
+  border: 1px solid #ca0000;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .bar.half {
+    transform: translateX(0.7rem);
+  }
+}
+@media (max-width: 992px) {
+  .menu {
+    width: 7%;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 30%;
+  }
+  .menu {
+    width: 10%;
+  }
+  .contentBox p {
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 2em;
+  }
+  .contentBox p .p_second {
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+  .contentBox .countdown .time {
+    min-width: 80px;
+    font-size: 40px;
+  }
+  .bx {
+    margin: 10px;
+    padding: 8px;
+    font-size: 18px;
+  }
+  .bxl-facebook {
+    margin-left: -1%;
+  }
+}
+@media (max-width: 576px) {
+  .logo {
+    width: 45%;
+  }
+  .menu {
+    width: 13%;
+  }
+  .bar.half {
+    transform: translateX(0.8rem);
+  }
+  .footer {
+    color: #7c7c7d;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-family: suisseLight;
+  }
+  .footer .mbl-view {
+    display: none;
+  }
+  #popup {
+    width: 95%;
+  }
+  #popup.active {
+    top: 45%;
+  }
+}
+@media (max-width: 460px) {
+  .logo {
+    width: 40%;
+  }
+  .menu {
+    width: 17%;
+  }
+  .bar.half {
+    transform: translateX(0.7rem);
+  }
+  .bxl-facebook {
+    margin-left: 1.4%;
+  }
+}
