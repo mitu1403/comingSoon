@@ -3,13 +3,13 @@
   $visitor_email = $_POST['email'];
   $message = $_POST['message'];
 
-  $email_from = 'mi2dhaka2016@gmail.com';
+  $email_from = 'mitu@targetscope.com.bd';
 
-  $email_subject = "New Form Submission";
+  $email_subject = "Got a New Query for you!!";
 
-  $email_body = "User Name: $name.\n"."User Email: $visitor_email.\n"."User Message: $message.\n";
+  $email_body = "User Name: $name.\n"."User Email: $visitor_email\n"."User Message: \n$message.\n";
 
-  $to = "mahmuda5250@gmail.com";
+  $to = "info@targetscope.com.bd";
 
   $headers = "Form: $email_from \r\n";
 

@@ -19,7 +19,7 @@
 
       <div class="row navbar pt-5 pb-5 ">
         <div class="col-6 col-sm-6 d-flex flex-row" >
-          <a class="navbar-brand" href="indes.html">
+          <a class="navbar-brand" href="index.html">
             <img class="logo" src="assets/images/TS_BullsEye.png" alt="Logo of Target Scope Consulting" width="15%">
           </a>
         </div>
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3 "></div>
-        <div class="col-12 col-md-1 ">
+        <div class="col-12 col-md-1">
           <a href="https://www.facebook.com/Target-Scope-Consulting-104161418819592">
             <i class='bx bxl-facebook'></i>
           </a>
@@ -70,8 +70,7 @@
     <div class="row">
       <div class="col-sm-11 d-flex flex-row"></div>
       <div class="col-sm-1 d-flex flex-row-reverse">
-        <a onclick="toggle()"><i class='bx bx-x'></i></a>
-        
+        <a onclick="toggle()"><i class='bx bx-x'></i></a>        
       </div>
     </div>
     <h5>Want to know more about <span style="color: #ca0000;">Target Scope?</span></h5>
@@ -113,13 +112,27 @@
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/jquery.slim.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/app.js"></script>
   <script>
     AOS.init();
   </script>
-  
-  
+  <script>
+    // DISABLE RIGHT-CLICK
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+
+    // DISABLE THE “VIEW SOURCE” SHORTCUT KEY
+    document.addEventListener("keydown", (e) => {
+    // USE THIS TO DISABLE CONTROL AND ALL FUNCTION KEYS
+    // if (e.ctrlKey || (e.keyCode>=112 && e.keyCode<=123)) {
+    // THIS WILL ONLY DISABLE CONTROL AND F12
+      if (e.ctrlKey || e.keyCode==123) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    });
+  </script> 
 </body>
 </html>
